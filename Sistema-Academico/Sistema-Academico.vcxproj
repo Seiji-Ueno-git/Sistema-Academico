@@ -127,7 +127,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Aluno.cpp" />
+    <ClCompile Include="Departamento.cpp" />
+    <ClCompile Include="Materia.cpp" />
+    <ClCompile Include="Pessoa.cpp" />
+    <ClCompile Include="Principal.cpp" />
+    <ClCompile Include="Professor.cpp" />
     <ClCompile Include="Sistema-Academico.cpp" />
+    <ClCompile Include="Time.cpp" />
+    <ClCompile Include="Universidade.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Aluno.h" />
+    <ClInclude Include="Departamento.h" />
+    <ClInclude Include="Materia.h" />
+    <ClInclude Include="Pessoa.h" />
+    <ClInclude Include="Principal.h" />
+    <ClInclude Include="Professor.h" />
+    <ClInclude Include="Time.h" />
+    <ClInclude Include="Universidade.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
