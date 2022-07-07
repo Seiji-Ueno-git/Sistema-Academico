@@ -134,7 +134,7 @@
     <ClCompile Include="Principal.cpp" />
     <ClCompile Include="Professor.cpp" />
     <ClCompile Include="Sistema-Academico.cpp" />
-    <ClCompile Include="Time.cpp" />
+    <ClCompile Include="TimeSa.cpp" />
     <ClCompile Include="Universidade.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -144,7 +144,7 @@
     <ClInclude Include="Pessoa.h" />
     <ClInclude Include="Principal.h" />
     <ClInclude Include="Professor.h" />
-    <ClInclude Include="Time.h" />
+    <ClInclude Include="TimeSa.h" />
     <ClInclude Include="Universidade.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
