@@ -1,8 +1,8 @@
-
 #include <iostream>
-#include "Time.h"
+#include "Principal.h"
 
 int main()
 {
-    Time tempo;
+    Principal main;
+
 }
