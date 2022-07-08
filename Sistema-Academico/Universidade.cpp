@@ -63,3 +63,18 @@ void Universidade::setDepartamento(Departamento* newDep)
 		}
 	}
 }
+
+void Universidade::printDepartamentos()
+{
+	ElDepartamento* aux = NULL;
+	aux = inicioElDep;
+	int i = 1;
+
+	while (aux!=NULL)
+	{
+		std::cout << aux->getDepartamento()->getNome() << " / " << i << std::endl;
+		i++;
+		aux = aux->getProxElDep();
+	}
+	std::cout << std::endl;
+}

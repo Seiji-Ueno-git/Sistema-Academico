@@ -37,3 +37,8 @@ void Departamento::setUniFiliada(Universidade* uni)
 		uni->setDepartamento(this);
 	}
 }
+
+string Departamento::GetNomeUniFiliada()
+{
+	return universidadeFiliada->getNome();
+}

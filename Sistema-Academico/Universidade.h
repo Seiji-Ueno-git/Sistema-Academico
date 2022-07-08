@@ -16,8 +16,9 @@ public:
 	string getNome();
 	
 	void setDepartamento(Departamento* newDep);
-private:
+	void printDepartamentos();
 
+private:
 	string nome;
 	
 	ElDepartamento* atualElDep;

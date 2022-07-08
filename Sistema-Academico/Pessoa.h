@@ -29,7 +29,6 @@ public:
 	char getGenero();
 
 private:
-
 	unsigned int dmy[3]; // Data de nascimento , [dia/mes/ano]
 	int idade;
 

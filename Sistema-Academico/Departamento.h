@@ -15,6 +15,7 @@ public:
 
 	string getNome();
 	void setUniFiliada(Universidade* uni);
+	string GetNomeUniFiliada();
 
 private:
 	Universidade* universidadeFiliada;
