@@ -17,7 +17,6 @@ public:
 	
 	void setDepartamento(Departamento* newDep);
 private:
-
 	string nome;
 	
 	ElDepartamento* atualElDep;
