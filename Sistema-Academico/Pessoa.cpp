@@ -66,7 +66,6 @@ void Pessoa::setDataNascimento(unsigned int diaN, unsigned int mesN, unsigned in
 	}
 
 	if ((diaN <= numeroDiasMensal[mesNP] && mesN <= 12)){
-
 		dmy[0] = diaN;
 		dmy[1] = mesN;
 		dmy[2] = anoN;

@@ -16,10 +16,8 @@ public:
 	void printDadosPessoa(Pessoa x);
 
 private:
-
 	Pessoa Newton;
 	Pessoa Albert;
 	Pessoa Marie;
-
 };
 
