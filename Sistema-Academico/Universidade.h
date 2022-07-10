@@ -3,6 +3,7 @@
 #include <string>
 #include "Departamento.h"
 #include "ElDepartamento.h"
+#include "Disciplina.h"
 
 using std::string;
 

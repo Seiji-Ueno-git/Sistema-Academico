@@ -73,8 +73,17 @@ void Universidade::printDepartamentos()
 	while (aux!=NULL)
 	{
 		std::cout << aux->getDepartamento()->getNome() << " / " << i << std::endl;
-		i++;
+
+		aux->getDepartamento()->printDispinas();
+		aux->getDepartamento()->printDisInReverse();
+
 		aux = aux->getProxElDep();
+		i++;
+
+		std::cout << std::endl;
 	}
 	std::cout << std::endl;
 }
+
+
+

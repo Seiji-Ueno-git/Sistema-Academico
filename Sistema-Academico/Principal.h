@@ -2,6 +2,7 @@
 #include <iostream>
 #include "Pessoa.h"
 #include "Universidade.h"
+#include "Disciplina.h"
 
 
 using std::cout;
@@ -18,6 +19,7 @@ public:
 	void printDadosPessoa(Pessoa x);
 
 	void inicializaUniversidades();
+	void iniciaDisciplinas();
 	void printUniversidades();
 
 private:
@@ -38,5 +40,12 @@ private:
 	Departamento QuimicaSorbonne;
 	Departamento RadiacionSorbonne;
 
+	Disciplina Calculo;
+	Disciplina Probabilidade;
+	Disciplina MatematicaDiscreta;
+	Disciplina QuimicaGeral;
+	Disciplina interUniversidades;
+	Disciplina fisica4;
+	Disciplina TheThirdOne;
 };
 
