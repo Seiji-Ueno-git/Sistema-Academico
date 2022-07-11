@@ -5,7 +5,6 @@
 class TimeSa
 {
 public:
-
 	TimeSa();
 	~TimeSa();
 
@@ -20,8 +19,6 @@ public:
 	int getSegundos();
 
 private:
-
 	time_t segundos;
 	struct tm ltm;
-
 };

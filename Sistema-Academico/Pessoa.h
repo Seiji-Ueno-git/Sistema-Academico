@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include "TimeSa.h"
+#include "Universidade.h"
 
 using std::string;
 using std::vector;
@@ -10,7 +11,6 @@ using std::vector;
 class Pessoa
 {
 public:
-
 	Pessoa();
 	Pessoa(string nomeP, unsigned int diaN, unsigned int mesN, unsigned int anoN, char generoP = 'x');
 
@@ -29,13 +29,14 @@ public:
 	char getGenero();
 
 private:
-
 	unsigned int dmy[3]; // Data de nascimento , [dia/mes/ano]
+	int idade;
+
 	string nome;
 	char genero;
 
 	bool bissexto;
-	int idade;
+
 	TimeSa time;
 };
 
