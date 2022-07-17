@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include "Pessoa.h"
+#include "Aluno.h"
 #include "Universidade.h"
 #include "Disciplina.h"
 
@@ -21,6 +22,7 @@ public:
 	void inicializaUniversidades();
 	void iniciaDisciplinas();
 	void printUniversidades();
+	void iniciaAlunos();
 
 private:
 	Pessoa Newton;
@@ -47,5 +49,11 @@ private:
 	Disciplina interUniversidades;
 	Disciplina fisica4;
 	Disciplina TheThirdOne;
+
+	Aluno AAA;
+	Aluno BBB;
+	Aluno CCC;
+	Aluno DDD;
+	Aluno EEE;
 };
 

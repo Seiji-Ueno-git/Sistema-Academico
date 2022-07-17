@@ -1,21 +1,17 @@
 #include "Disciplina.h"
+#include "Aluno.h"
 
-Disciplina::Disciplina()
+Disciplina::Disciplina():
+	listaDeAlunos(this)
 {
 	departamentoAssociado = NULL;
 	id = -1;
-
-	maxAlunos = 20;
-	alunosMatriculados = 0;
 }
 
 Disciplina::~Disciplina()
 {
 	departamentoAssociado = NULL;
 	id = -1;
-
-	maxAlunos = 20;
-	alunosMatriculados = 0;
 }
 
 void Disciplina::setNomeDisciplina(string nomeDis)
@@ -43,8 +39,23 @@ void Disciplina::setDepartamentoAssociado(Departamento* depFiliado)
 {
 	if (depFiliado != NULL) {
 		departamentoAssociado = depFiliado;
-		depFiliado->setDisciplina(this);
+		depFiliado->setNovaDisciplina(this);
 	}
+}
+
+void Disciplina::setAluno(Aluno* novoAluno)
+{
+	listaDeAlunos.setAluno(novoAluno);
+}
+
+void Disciplina::printAlunoS()
+{
+	listaDeAlunos.printAlunos();
+}
+
+void Disciplina::printAlunoSv2()
+{
+	listaDeAlunos.printAlunosV2();
 }
 
 string Disciplina::getNome()
@@ -55,4 +66,9 @@ string Disciplina::getNome()
 int Disciplina::getId()
 {
 	return id;
+}
+
+Departamento* Disciplina::getDepartamento()
+{
+	return departamentoAssociado;
 }

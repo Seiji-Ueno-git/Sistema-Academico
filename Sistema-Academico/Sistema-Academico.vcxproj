@@ -130,8 +130,12 @@
     <ClCompile Include="Aluno.cpp" />
     <ClCompile Include="Departamento.cpp" />
     <ClCompile Include="Disciplina.cpp" />
+    <ClCompile Include="ElAluno.cpp" />
     <ClCompile Include="ElDepartamento.cpp" />
     <ClCompile Include="ElDisciplina.cpp" />
+    <ClCompile Include="ListaAlunos.cpp" />
+    <ClCompile Include="ListaDepartamentos.cpp" />
+    <ClCompile Include="ListaDisciplinas.cpp" />
     <ClCompile Include="Pessoa.cpp" />
     <ClCompile Include="Principal.cpp" />
     <ClCompile Include="Professor.cpp" />
@@ -143,8 +147,12 @@
     <ClInclude Include="Aluno.h" />
     <ClInclude Include="Departamento.h" />
     <ClInclude Include="Disciplina.h" />
+    <ClInclude Include="ElAluno.h" />
     <ClInclude Include="ElDepartamento.h" />
     <ClInclude Include="ElDisciplina.h" />
+    <ClInclude Include="ListaAlunos.h" />
+    <ClInclude Include="ListaDepartamentos.h" />
+    <ClInclude Include="ListaDisciplinas.h" />
     <ClInclude Include="Pessoa.h" />
     <ClInclude Include="Principal.h" />
     <ClInclude Include="Professor.h" />

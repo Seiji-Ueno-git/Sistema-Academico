@@ -9,7 +9,6 @@ ElDisciplina::ElDisciplina()
 	ptrDisplina = NULL;
 	pProxEldisplina = NULL;
 	pUltimoElDisplina = NULL;
-
 }
 
 ElDisciplina::~ElDisciplina()

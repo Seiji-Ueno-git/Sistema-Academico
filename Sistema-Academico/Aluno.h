@@ -18,7 +18,6 @@ public:
 
 private:
     int ra; // Registro Academico
-    
     Universidade* pUniversidadeFiliada;
 };
 

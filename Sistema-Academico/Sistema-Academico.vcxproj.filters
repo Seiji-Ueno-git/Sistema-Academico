@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Arquivos de Origem\Listas">
+      <UniqueIdentifier>{69cb3fe2-76b7-49e1-8223-b356d9918d6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Origem\Listas\Elementos">
+      <UniqueIdentifier>{152ed682-5976-4858-a8e5-d7eec2c09673}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Cabeçalho\Listas.h">
+      <UniqueIdentifier>{868d9b51-7165-4d49-9914-80bcf2a93e69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Cabeçalho\Listas.h\Elementos.h">
+      <UniqueIdentifier>{08ae3a99-d646-4756-aee2-34e7c76a9f12}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Sistema-Academico.cpp">
@@ -39,8 +51,26 @@
     <ClCompile Include="TimeSa.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
-    <ClCompile Include="ElDepartamento.cpp">
+    <ClCompile Include="Disciplina.cpp">
       <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
+    <ClCompile Include="ElDepartamento.cpp">
+      <Filter>Arquivos de Origem\Listas\Elementos</Filter>
+    </ClCompile>
+    <ClCompile Include="ElAluno.cpp">
+      <Filter>Arquivos de Origem\Listas\Elementos</Filter>
+    </ClCompile>
+    <ClCompile Include="ElDisciplina.cpp">
+      <Filter>Arquivos de Origem\Listas\Elementos</Filter>
+    </ClCompile>
+    <ClCompile Include="ListaAlunos.cpp">
+      <Filter>Arquivos de Origem\Listas</Filter>
+    </ClCompile>
+    <ClCompile Include="ListaDepartamentos.cpp">
+      <Filter>Arquivos de Origem\Listas</Filter>
+    </ClCompile>
+    <ClCompile Include="ListaDisciplinas.cpp">
+      <Filter>Arquivos de Origem\Listas</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -65,8 +95,26 @@
     <ClInclude Include="TimeSa.h">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
-    <ClInclude Include="ElDepartamento.h">
+    <ClInclude Include="Disciplina.h">
       <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+    <ClInclude Include="ListaAlunos.h">
+      <Filter>Arquivos de Cabeçalho\Listas.h</Filter>
+    </ClInclude>
+    <ClInclude Include="ListaDepartamentos.h">
+      <Filter>Arquivos de Cabeçalho\Listas.h</Filter>
+    </ClInclude>
+    <ClInclude Include="ListaDisciplinas.h">
+      <Filter>Arquivos de Cabeçalho\Listas.h</Filter>
+    </ClInclude>
+    <ClInclude Include="ElAluno.h">
+      <Filter>Arquivos de Cabeçalho\Listas.h\Elementos.h</Filter>
+    </ClInclude>
+    <ClInclude Include="ElDepartamento.h">
+      <Filter>Arquivos de Cabeçalho\Listas.h\Elementos.h</Filter>
+    </ClInclude>
+    <ClInclude Include="ElDisciplina.h">
+      <Filter>Arquivos de Cabeçalho\Listas.h\Elementos.h</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -3,23 +3,11 @@
 Universidade::Universidade()
 {
 	nome = "";
-	atualElDep = NULL;
-	inicioElDep = NULL;
 }
 
 Universidade::~Universidade()
 {   
 	nome = "";
-	ElDepartamento* paux = NULL;
-	paux = inicioElDep;
-
-	while (inicioElDep != NULL)
-	{
-		inicioElDep = paux->getProxElDep();
-		delete paux;
-		paux = inicioElDep;
-	}
-	atualElDep = NULL;
 }
 
 void Universidade::setNome(string nomeU)
@@ -43,46 +31,12 @@ string Universidade::getNome()
 
 void Universidade::setDepartamento(Departamento* newDep)
 {
-	if (newDep != NULL) {
-		// criar ponteiro auxiliar do tipo Elemento Departamento
-		ElDepartamento* paux = NULL;
-
-		// novo elemento departamento
-		paux = new ElDepartamento();
-
-		paux->setDepartamento(newDep);
-
-		if (inicioElDep == NULL) {
-			inicioElDep = paux;
-			atualElDep = paux;
-		}
-		else
-		{
-			atualElDep->setProxElDep(paux);
-			atualElDep = paux;
-		}
-	}
+	departamentos.setNovoDepartamento(newDep);
 }
 
 void Universidade::printDepartamentos()
 {
-	ElDepartamento* aux = NULL;
-	aux = inicioElDep;
-	int i = 1;
-
-	while (aux!=NULL)
-	{
-		std::cout << aux->getDepartamento()->getNome() << " / " << i << std::endl;
-
-		aux->getDepartamento()->printDispinas();
-		aux->getDepartamento()->printDisInReverse();
-
-		aux = aux->getProxElDep();
-		i++;
-
-		std::cout << std::endl;
-	}
-	std::cout << std::endl;
+	departamentos.printDepartamentos();
 }
 
 

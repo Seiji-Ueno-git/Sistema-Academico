@@ -2,8 +2,8 @@
 #include <iostream>
 #include <string>
 #include "Departamento.h"
-#include "ElDepartamento.h"
-#include "Disciplina.h"
+#include "ListaDepartamentos.h"
+
 
 using std::string;
 
@@ -21,8 +21,6 @@ public:
 
 private:
 	string nome;
-	
-	ElDepartamento* atualElDep;
-	ElDepartamento* inicioElDep;
+	ListaDepartamentos departamentos; // Lista de encadeamento Simples
 };
 
