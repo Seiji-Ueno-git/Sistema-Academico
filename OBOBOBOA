@@ -1,0 +1,35 @@
+[33mcommit 97eaf562c230370d2341ea937282dba5921c71b3[m[33m ([m[1;36mHEAD -> [m[1;32muniversidadeParcial[m[33m)[m
+Author: Seiji.Ueno <Rafael.seiji.git@gmail.com>
+Date:   Sun Jul 10 20:58:06 2022 -0300
+
+    Classe Disciplina Implementada por meio de Encadeamento Duplo
+
+[33mcommit f81ad5231fd17b19ac57f89e3e380724ff2287e0[m
+Author: Seiji.Ueno <Rafael.seiji.git@gmail.com>
+Date:   Fri Jul 8 12:07:35 2022 -0300
+
+    Classse Universidade e Departamento Implementadas - tudo OK
+
+[33mcommit 87af9c1ea1e152770c19700351e7122580a91d3f[m[33m ([m[1;31morigin/universidadeParcial[m[33m, [m[1;32mtime-added[m[33m)[m
+Author: Seiji.Ueno <Rafael.seiji.git@gmail.com>
+Date:   Fri Jul 8 00:19:14 2022 -0300
+
+    Classe Universidade/Departamento Parcialmente Implementadas
+
+[33mcommit 67314425297c361e69f1a9793a6dc03c0ec3ecc0[m[33m ([m[1;31morigin/universidade[m[33m, [m[1;31morigin/time-added[m[33m, [m[1;32muniversidade[m[33m)[m
+Author: Seiji.Ueno <Rafael.seiji.git@gmail.com>
+Date:   Thu Jul 7 14:29:39 2022 -0300
+
+    Classe Pessoa Implementada, e Time modificada para melhor uso
+
+[33mcommit 98bb0b2ccd8d119f0a3029ac7562816e063bb054[m
+Author: Seiji.Ueno <Rafael.seiji.git@gmail.com>
+Date:   Wed Jul 6 16:48:52 2022 -0300
+
+     Adicionado Classe Time e desenvolvida, alem disso foram criadas classes para futuro desenvolvimento
+
+[33mcommit 6c9436bfa1c594e448fd2e49f7f757d311155306[m[33m ([m[1;31morigin/pessoa-implemented[m[33m, [m[1;31morigin/master[m[33m, [m[1;32mpessoa-implemented[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Seiji.Ueno <Rafael.seiji.git@gmail.com>
+Date:   Tue Jul 5 18:56:31 2022 -0300
+
+    Arquivos Iniciais Do repositório

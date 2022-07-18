@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include "ElDisciplina.h"
+#include "ListaDisciplinas.h"
 
 class Universidade;
 class Displina;
@@ -18,16 +18,15 @@ public:
 
 	string getNome();
 	void setUniFiliada(Universidade* uni);
-	string GetNomeUniFiliada();
+	Universidade* GetUniFiliada();
 
-	void setDisciplina(Disciplina* newDis);
+	void setNovaDisciplina(Disciplina* newDis);
 	void printDispinas();
 	void printDisInReverse();
 
 private:
 	Universidade* universidadeFiliada;
 	string nome;
-
-	ElDisciplina* atualElDis;
-	ElDisciplina* incioElDis;
+	
+	ListaDisciplinas disciplinas; // lista duplamente encadeada.
 };

@@ -6,7 +6,7 @@ Principal::Principal()
 	inicializaPessoas();
 	inicializaUniversidades();
 	printUniversidades();
-
+	
 } 
 
 Principal::~Principal()
@@ -22,6 +22,8 @@ void Principal::inicializaPessoas()
 	printDadosPessoa(Newton);
 	printDadosPessoa(Albert);
 	printDadosPessoa(Marie);
+
+	iniciaAlunos();
 }
 
 void Principal::printDadosPessoa(Pessoa x)
@@ -31,7 +33,6 @@ void Principal::printDadosPessoa(Pessoa x)
 	for (const int& i : x.getDataNascimentoDMY()) {
 		cout << " " << i;
 	}
-
 	cout << '\n' << endl;
 }
 
@@ -57,18 +58,27 @@ void Principal::inicializaUniversidades()
 	MatematicaDiscreta.setDepartamentoAssociado(&MatematicaPrinceton);
 	TheThirdOne.setDepartamentoAssociado(&MatematicaPrinceton);
 	Probabilidade.setDepartamentoAssociado(&FisicaPrinceton);
+	//inclusao alunos
+	Calculo.setAluno(&AAA);
+	Calculo.setAluno(&BBB);
+	MatematicaDiscreta.setAluno(&EEE);
+	MatematicaDiscreta.setAluno(&AAA);
+	Probabilidade.setAluno(&BBB);
+	Probabilidade.setAluno(&AAA);
+	Probabilidade.setAluno(&DDD);
 
 	// Inicializcao Sorbonne e seus respectivos departamentos
 	Sorbonne.setNome("Universidade de Paris");
+
 	FisicaSorbonne.setUniFiliada(&Sorbonne);
 	QuimicaSorbonne.setUniFiliada(&Sorbonne);
 	RadiacionSorbonne.setUniFiliada(&Sorbonne);
 	FisicaSorbonne.setNome("Fisica Sorbonne");
 	QuimicaSorbonne.setNome("Quimica Sorbonne");
 	RadiacionSorbonne.setNome("Procedimentos Radioativos Dep");
+
 	//displinas
 	QuimicaGeral.setDepartamentoAssociado(&RadiacionSorbonne);
-
 	iniciaDisciplinas();
 }
 
@@ -93,12 +103,41 @@ void Principal::iniciaDisciplinas()
 void Principal::printUniversidades()
 {
 	// departamentos se incluem na universidade.
-	std::cout << FisicaCambrige.GetNomeUniFiliada() << ":" << std::endl;
+
+	std::cout << FisicaCambrige.GetUniFiliada()->getNome() << ":" << std::endl;
 	Cambrige.printDepartamentos();
+
 
 	std::cout << Princeton.getNome() << ":" << std::endl;
 	Princeton.printDepartamentos();
 
+
 	std::cout << Sorbonne.getNome() << ":" << std::endl;
 	Sorbonne.printDepartamentos();
+}
+
+void Principal::iniciaAlunos()
+{
+	AAA.inicializa("AAA", 1, 1, 2000);
+	AAA.setUniversidade(&Princeton);
+	AAA.setRa(1);
+
+	BBB.inicializa("BBB", 1, 1, 2000);
+	BBB.setUniversidade(&Princeton);
+	BBB.setRa(2);
+
+	CCC.inicializa("CCC", 1, 1, 2000);
+	CCC.setUniversidade(&Princeton);
+	CCC.setRa(3);
+
+	DDD.inicializa("DDD", 1, 1, 2000);
+	DDD.setUniversidade(&Princeton);
+	DDD.setRa(4);
+
+	EEE.inicializa("EEE", 1, 1, 2000);
+	EEE.setUniversidade(&Princeton);
+	EEE.setRa(5);
+
+
+
 }
