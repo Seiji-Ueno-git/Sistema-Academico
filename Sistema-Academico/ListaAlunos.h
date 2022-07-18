@@ -6,7 +6,7 @@ class Aluno;
 class ListaAlunos
 {
 public:
-	ListaAlunos(Disciplina* disciplinaAfiliada);
+	ListaAlunos(Disciplina* disciplinaAfiliada, int maximo = 10);
 	~ListaAlunos();
 
 	void setAluno(Aluno* novoAluno);
@@ -17,6 +17,7 @@ public:
 
 private:
 	Disciplina* ptrDisplina;
+
 	ElAluno* ptrInicioElAluno;
 	ElAluno* ptrAtualElAluno;
 

@@ -6,6 +6,7 @@
   ElDisciplina.cpp
   ListaAlunos.cpp
   ListaDepartamentos.cpp
+  ListaDisciplinas.cpp
   Pessoa.cpp
   Principal.cpp
   Professor.cpp

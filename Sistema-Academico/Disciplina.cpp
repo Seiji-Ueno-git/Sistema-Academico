@@ -2,7 +2,7 @@
 #include "Aluno.h"
 
 Disciplina::Disciplina():
-	listaDeAlunos(this)
+	listaDeAlunos(this,5)
 {
 	departamentoAssociado = NULL;
 	id = -1;

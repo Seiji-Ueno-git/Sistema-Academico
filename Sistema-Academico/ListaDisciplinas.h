@@ -7,14 +7,8 @@ class Displinas;
 class ListaDisciplinas
 {
 public:
-	ListaDisciplinas();
+	ListaDisciplinas(int max = -1);
 	~ListaDisciplinas();
-
-	void setAtualElDis(ElDisciplina* NovaDisplinaAtual);
-	void setInicioElDis(ElDisciplina* NovaDisplinaAtual);
-
-	ElDisciplina* getAtualElDis();
-	ElDisciplina* getInicioElDis();
 
 	void setNovaDisciplina(Disciplina* newDis);
 
@@ -24,5 +18,8 @@ public:
 private:
 	ElDisciplina* atualElDis;
 	ElDisciplina* incioElDis;
+
+	int maxNdisc; // numero maximo de disciplinas
+	int counter_Disc; // numero de displinas na lista
 };
 

@@ -7,14 +7,8 @@ class Departamento;
 class ListaDepartamentos
 {
 public:
-	ListaDepartamentos();
+	ListaDepartamentos(int MaxDeps = -1);
 	~ListaDepartamentos();
-
-	void setAtualElDep(ElDepartamento* newDep);
-	void setInicioElDep(ElDepartamento* newDep);
-
-	ElDepartamento* getAtualElDep();
-	ElDepartamento* getInicioElDep();
 
 	void setNovoDepartamento(Departamento* newDep);
 	void printDepartamentos();
@@ -22,5 +16,8 @@ public:
 private:
 	ElDepartamento* atualElDep;
 	ElDepartamento* inicioElDep;
+
+	int maxNdeps; // Numero maximo de departamentos permitido na lista.
+	int counter_deps; // numero de departamentos atuais na lista.
 };
 

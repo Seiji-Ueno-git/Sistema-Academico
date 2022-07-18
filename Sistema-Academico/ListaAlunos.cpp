@@ -2,20 +2,20 @@
 #include "Aluno.h"
 #include "Disciplina.h"
 
-ListaAlunos::ListaAlunos(Disciplina* disciplinaAfiliada)
+ListaAlunos::ListaAlunos(Disciplina* disciplinaAfiliada, int max)
 {
 	ptrDisplina = disciplinaAfiliada;
 	ptrInicioElAluno = NULL;
 	ptrAtualElAluno = NULL;
 
-	maxAlunos = 5;
+	maxAlunos = max;
 	alunosMatriculados = 0;
 }
 
 ListaAlunos::~ListaAlunos()
 {
 	alunosMatriculados = 0;
-	maxAlunos = 10;
+	maxAlunos = 0;
 
 	ElAluno* aux = NULL;
 	aux = ptrInicioElAluno;

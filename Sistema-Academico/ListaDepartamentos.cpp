@@ -1,8 +1,10 @@
 #include "ListaDepartamentos.h"
 #include "Departamento.h"
 
-ListaDepartamentos::ListaDepartamentos()
+ListaDepartamentos::ListaDepartamentos(int MaxDeps)
 {
+	maxNdeps = MaxDeps;
+	counter_deps = 0;
 	atualElDep = NULL;
 	inicioElDep = NULL;
 }
@@ -21,31 +23,9 @@ ListaDepartamentos::~ListaDepartamentos()
 	atualElDep = NULL;
 }
 
-void ListaDepartamentos::setAtualElDep(ElDepartamento* newDep)
-{
-	if (newDep != NULL)
-		atualElDep = newDep;
-}
-
-void ListaDepartamentos::setInicioElDep(ElDepartamento* newDep)
-{
-	if (newDep != NULL)
-		inicioElDep = newDep;
-}
-
-ElDepartamento* ListaDepartamentos::getAtualElDep()
-{
-	return atualElDep;
-}
-
-ElDepartamento* ListaDepartamentos::getInicioElDep()
-{
-	return inicioElDep;
-}
-
 void ListaDepartamentos::setNovoDepartamento(Departamento* newDep)
 {
-	if (newDep != NULL) {
+	if ((newDep != NULL && counter_deps < maxNdeps)||(newDep != NULL && maxNdeps == -1)) {
 		// criar ponteiro auxiliar do tipo Elemento Departamento
 		ElDepartamento* paux = NULL;
 
@@ -57,11 +37,13 @@ void ListaDepartamentos::setNovoDepartamento(Departamento* newDep)
 		if (inicioElDep == NULL) {
 			atualElDep = paux;
 			inicioElDep = paux;
+			counter_deps++;
 		}
 		else
 		{
 			atualElDep->setProxElDep(paux);
 			atualElDep = paux;
+			counter_deps++;
 		}
 	}
 }
