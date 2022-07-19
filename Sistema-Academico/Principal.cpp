@@ -3,141 +3,235 @@
 
 Principal::Principal()
 {
-	inicializaPessoas();
-	inicializaUniversidades();
-	printUniversidades();
-	
+	executar();
 } 
 
 Principal::~Principal()
 {
 }
 
-void Principal::inicializaPessoas()
+void Principal::executar()
 {
-	Newton.inicializa("Isaac Newton", 4, 1, 1642, 'm');
-	Albert.inicializa("albert einstein", 14, 3, 1879, 'm');
-	Marie.inicializa("Marie Curie", 7, 11, 1867, 'f');
-	
-	printDadosPessoa(Newton);
-	printDadosPessoa(Albert);
-	printDadosPessoa(Marie);
-
-	iniciaAlunos();
+	// ...
+	menu();
 }
 
-void Principal::printDadosPessoa(Pessoa x)
+void Principal::cadDisciplina()
 {
-	cout << x.getNome() << '\t' << x.getIdade() << '/' << x.getGenero() << "\nNascimento: " << endl;
 
-	for (const int& i : x.getDataNascimentoDMY()) {
-		cout << " " << i;
+}
+
+void Principal::cadDepartamento()
+{
+	int op = -1;
+	string nomeDep;
+	string nomeUni;
+	Universidade* ptrUni = nullptr;
+	Departamento* paux = nullptr;
+
+	cout << "\n Sistema Academico 1.0 - Cadastro Departamento " << endl;
+	cout << "Escreva o nome da Universidade Filiada: " << endl;
+	cout << " -> ";
+	std::cin >> nomeUni;
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+	ptrUni = LUniversidades.existeUniversidade(nomeUni);
+
+	if (ptrUni != nullptr) {
+
+		cout << "Escreva o nome do Departamento : " << endl;
+		cout << " -> "; 
+		std::cin >> nomeDep;
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+		//std::cin.sync();
+		cout << "*Departamento Cadastrado" << endl;
+
+		paux = new Departamento();
+		paux->setNome(nomeDep);
+		paux->setUniFiliada(ptrUni);
+
+		LDepartamentos.setNovoDepartamento(paux);
+
+		system("Pause");
 	}
-	cout << '\n' << endl;
+	else
+	{
+		while (op != 3)
+		{
+			cout << " Error - Universidade inexistente : " << endl;
+			cout << " 1 - Tentar Novamente" << endl;
+			cout << " 2 - Listar Universidades e Tentar Novamente" << endl;
+			cout << " 3 - Voltar ao Menu De Cadastro" << endl;
+			cout << " -> ";
+			std::cin >> op;
+
+			switch (op)
+			{
+			case 1: { 
+				system("cls");
+				cadDepartamento();
+				}
+				  break;
+
+			case 2: {
+				system("cls");
+				LUniversidades.printUniversidades();
+				cadDepartamento();
+				}
+				  break;
+
+			case 3: 
+				  break;
+
+			default: {
+				cout << "Alternativa Nao reconhecida!" << endl;
+				system("Pause");
+			}
+				   break;
+			}
+		}
+	}
 }
 
-void Principal::inicializaUniversidades()
+void Principal::cadUniversidade()
 {
-	//Inicializcao cambrige e seus respectivos departamentos
-	Cambrige.setNome("Trinity College");
-	//departamentos
-	FisicaCambrige.setUniFiliada(&Cambrige);
-	FisicaCambrige.setNome("Fisica Cambrige");
-	//displinas
-	fisica4.setDepartamentoAssociado(&FisicaCambrige);
-	interUniversidades.setDepartamentoAssociado(&FisicaCambrige);
+	string nomeUni;
+	Universidade* paux = nullptr;
 
-	// Inicializcao Princeton e seus respectivos departamentos
-	Princeton.setNome("Princeton");
-	MatematicaPrinceton.setUniFiliada(&Princeton);
-	FisicaPrinceton.setUniFiliada(&Princeton);
-	MatematicaPrinceton.setNome("Matematica Princeton");
-	FisicaPrinceton.setNome("Fisica Princeton");
-	//disciplinas
-	Calculo.setDepartamentoAssociado(&MatematicaPrinceton);
-	MatematicaDiscreta.setDepartamentoAssociado(&MatematicaPrinceton);
-	TheThirdOne.setDepartamentoAssociado(&MatematicaPrinceton);
-	Probabilidade.setDepartamentoAssociado(&FisicaPrinceton);
-	//inclusao alunos
-	Calculo.setAluno(&AAA);
-	Calculo.setAluno(&BBB);
-	MatematicaDiscreta.setAluno(&EEE);
-	MatematicaDiscreta.setAluno(&AAA);
-	Probabilidade.setAluno(&BBB);
-	Probabilidade.setAluno(&AAA);
-	Probabilidade.setAluno(&DDD);
+	cout << "\n Sistema Academico 1.0 - Cadastro Universidade" << endl;
+	cout << "Escreva o nome da Universidade : " << endl;
+	cout << " -> ";
+	std::cin >> nomeUni;
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
-	// Inicializcao Sorbonne e seus respectivos departamentos
-	Sorbonne.setNome("Universidade de Paris");
+	cout << "* Universidade Cadastrada" << endl;
 
-	FisicaSorbonne.setUniFiliada(&Sorbonne);
-	QuimicaSorbonne.setUniFiliada(&Sorbonne);
-	RadiacionSorbonne.setUniFiliada(&Sorbonne);
-	FisicaSorbonne.setNome("Fisica Sorbonne");
-	QuimicaSorbonne.setNome("Quimica Sorbonne");
-	RadiacionSorbonne.setNome("Procedimentos Radioativos Dep");
+	paux = new Universidade();
+	paux->setNome(nomeUni);
 
-	//displinas
-	QuimicaGeral.setDepartamentoAssociado(&RadiacionSorbonne);
-	iniciaDisciplinas();
+	LUniversidades.setNovaUniversidade(paux);
+
+	system("Pause");
 }
 
-void Principal::iniciaDisciplinas()
+void Principal::menu()
 {
-	MatematicaDiscreta.setNomeDisciplina("Matematica Discreta");
-	MatematicaDiscreta.setId(1852);
-	Probabilidade.setNomeDisciplina("Probabilidade");
-	Probabilidade.setId(8);
-	Calculo.setNomeDisciplina("Calculo");
-	Calculo.setId(3);
-	QuimicaGeral.setNomeDisciplina("QuimicaGeral");
-	QuimicaGeral.setId(60221367);
-	interUniversidades.setNomeDisciplina("Inter");
-	interUniversidades.setId(0);
-	fisica4.setNomeDisciplina("mecanica quantica");
-	fisica4.setId(662606957);
-	TheThirdOne.setNomeDisciplina("TheThirdOne");
-	TheThirdOne.setId(333);
+	int op = -1;
+
+	while (op != 3)
+	{
+		system("cls");
+		cout << "Bem Vindo ao Sistema Academico 1.0 " << endl;
+		cout << "Informe a alternativa desejada: " << endl;
+		cout << " 1 - Cadastrar. " << endl;
+		cout << " 2 - Executar. " << endl;
+		cout << " 3 - Sair. " << endl;
+		cout << " -> ";
+		std::cin >> op;
+
+		switch (op)
+		{
+		case 1: { menuCad(); }
+			break;
+
+		case 2: { menuExe(); }
+			  break;
+
+		case 3: { cout << " FIM " << endl; }
+			  break;
+
+		default: {
+			cout << "Alternativa Nao reconhecida!" << endl;
+			system("Pause");
+				}
+			break;
+		}
+	}
 }
 
-void Principal::printUniversidades()
+void Principal::menuCad()
 {
-	// departamentos se incluem na universidade.
+	int op = -1;
 
-	std::cout << FisicaCambrige.GetUniFiliada()->getNome() << ":" << std::endl;
-	Cambrige.printDepartamentos();
+	while (op != 4)
+	{
+		system("cls");
+		cout << "Sistema Academico 1.0 - Menu Cadastro" << endl;
+		cout << "Informe o numero desejado : " << endl;
+		cout << " 1 - Cadastrar Universidade : " << endl;
+		cout << " 2 - Cadastrar Departamentos : " << endl;
+		cout << " 3 - Cadastrar Displinas" << endl;
+		cout << " 4 - Menu Principal. " << endl;
+		cout << " -> ";
+		std::cin >> op;
 
+		switch (op)
+		{
+		case 1: { cadUniversidade(); }
+			  break;
 
-	std::cout << Princeton.getNome() << ":" << std::endl;
-	Princeton.printDepartamentos();
+		case 2: { cadDepartamento(); }
+			  break;
 
+		case 3: { cadDisciplina(); }
+			  break;
 
-	std::cout << Sorbonne.getNome() << ":" << std::endl;
-	Sorbonne.printDepartamentos();
+		case 4:
+			  break;
+
+		default: {
+			cout << "Alternativa Nao reconhecida!" << endl;
+			system("Pause");
+		}
+			   break;
+		}
+	}
 }
 
-void Principal::iniciaAlunos()
+void Principal::menuExe()
 {
-	AAA.inicializa("AAA", 1, 1, 2000);
-	AAA.setUniversidade(&Princeton);
-	AAA.setRa(1);
+	int op = -1;
 
-	BBB.inicializa("BBB", 1, 1, 2000);
-	BBB.setUniversidade(&Princeton);
-	BBB.setRa(2);
+	while (op != 4)
+	{
+		system("cls");
+		cout << "Sistema Academico 1.0 - Menu Executar" << endl;
+		cout << "Informe o numero desejado : " << endl;
+		cout << " 1 - Listar Universidades. " << endl;
+		cout << " 2 - Listar Departamentos. " << endl;
+		cout << " 3 - Listar Disciplinas. " << endl;
+		cout << " 4 - Menu Principal. " << endl;
+		cout << " -> ";
+		std::cin >> op;
 
-	CCC.inicializa("CCC", 1, 1, 2000);
-	CCC.setUniversidade(&Princeton);
-	CCC.setRa(3);
+		switch (op)
+		{
+		case 1: { LUniversidades.printUniversidades();
+					fflush(stdin);
+					system("Pause");
+			}
+			  break;
 
-	DDD.inicializa("DDD", 1, 1, 2000);
-	DDD.setUniversidade(&Princeton);
-	DDD.setRa(4);
+		case 2: { LDepartamentos.printDepartamentos(); 
+					fflush(stdin);
+					system("Pause");
+			}
+			  break;
 
-	EEE.inicializa("EEE", 1, 1, 2000);
-	EEE.setUniversidade(&Princeton);
-	EEE.setRa(5);
+		case 3: { LDisciplinas.printDispinas(); }
+					fflush(stdin);
+					system("Pause");
+			  break;
 
+		case 4:
+			  break;
 
-
+		default: {
+			cout << "Alternativa Nao reconhecida!" << endl;
+			system("Pause");
+		}
+			   break;
+		}
+	}
 }

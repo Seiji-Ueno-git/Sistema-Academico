@@ -1,59 +1,37 @@
 #pragma once
 #include <iostream>
-#include "Pessoa.h"
-#include "Aluno.h"
+#include <sstream>
+#include <limits>
 #include "Universidade.h"
-#include "Disciplina.h"
+#include "ListaUniversidades.h"
+#include "ListaDepartamentos.h"
+#include "ListaDisciplinas.h"
 
 
 using std::cout;
 using std::endl;
-using std::vector;
 
 class Principal
 {
 public:
 	Principal();
 	~Principal();
+	
+	void inicializa();
+	void executar();
+	
+	void cadDisciplina();
+	void cadDepartamento();
+	void cadUniversidade();
 
-	void inicializaPessoas();
-	void printDadosPessoa(Pessoa x);
-
-	void inicializaUniversidades();
-	void iniciaDisciplinas();
-	void printUniversidades();
-	void iniciaAlunos();
+	void menu();
+	void menuCad();
+	void menuExe();
 
 private:
-	Pessoa Newton;
-	Pessoa Albert;
-	Pessoa Marie;
-
-	Universidade Cambrige; // Trinity College
-	Universidade Princeton;
-	Universidade Sorbonne; // Universidade de paris
-
-	Departamento FisicaCambrige;
-
-	Departamento MatematicaPrinceton;
-	Departamento FisicaPrinceton;
-
-	Departamento FisicaSorbonne;
-	Departamento QuimicaSorbonne;
-	Departamento RadiacionSorbonne;
-
-	Disciplina Calculo;
-	Disciplina Probabilidade;
-	Disciplina MatematicaDiscreta;
-	Disciplina QuimicaGeral;
-	Disciplina interUniversidades;
-	Disciplina fisica4;
-	Disciplina TheThirdOne;
-
-	Aluno AAA;
-	Aluno BBB;
-	Aluno CCC;
-	Aluno DDD;
-	Aluno EEE;
+	
+	ListaUniversidades LUniversidades;
+	ListaDepartamentos LDepartamentos;    
+	ListaDisciplinas LDisciplinas;
 };
 
