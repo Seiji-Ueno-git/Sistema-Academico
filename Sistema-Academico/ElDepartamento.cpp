@@ -4,25 +4,25 @@
 
 ElDepartamento::ElDepartamento()
 {
-	ptrDep = NULL;
-	ptrProxElDep = NULL;
+	ptrDep = nullptr;
+	ptrProxElDep = nullptr;
 }
 
 ElDepartamento::~ElDepartamento()
 {
-	ptrDep = NULL;
-	ptrProxElDep = NULL;
+	ptrDep = nullptr;
+	ptrProxElDep = nullptr;
 }
 
 void ElDepartamento::setDepartamento(Departamento* newDep)
 {
-	if(newDep != NULL)
+	if(newDep != nullptr)
 	ptrDep = newDep;
 }
 
 void ElDepartamento::setProxElDep(ElDepartamento* PtrProxEl)
 {
-	if(PtrProxEl != NULL)
+	if(PtrProxEl != nullptr)
 	ptrProxElDep = PtrProxEl;
 }
 

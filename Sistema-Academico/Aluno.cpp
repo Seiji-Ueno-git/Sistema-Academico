@@ -1,9 +1,10 @@
 #include "Aluno.h"
 
-Aluno::Aluno():Pessoa()
+Aluno::Aluno() :
+	Pessoa(),
+	ra(-1)
 {
-	ra = -1;
-	pUniversidadeFiliada = NULL;
+	pUniversidadeFiliada = nullptr;
 }
 
 Aluno::Aluno(string nomeP, unsigned int diaN, unsigned int mesN, unsigned int anoN, char generoP,Universidade* Uni, int r):
@@ -16,7 +17,7 @@ Aluno::Aluno(string nomeP, unsigned int diaN, unsigned int mesN, unsigned int an
 Aluno::~Aluno()
 {
 	ra = -1;
-	pUniversidadeFiliada = NULL;
+	pUniversidadeFiliada = nullptr;
 }
 
 void Aluno::setRa(int r)
@@ -28,7 +29,7 @@ void Aluno::setRa(int r)
 
 void Aluno::setUniversidade(Universidade* uni)
 {
-	if (uni != NULL) {
+	if (uni != nullptr) {
 		pUniversidadeFiliada = uni;
 	}
 }

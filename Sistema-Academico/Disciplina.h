@@ -7,7 +7,7 @@ class Aluno;
 class Disciplina
 {
 public:
-	Disciplina();
+	Disciplina(int id);
 	~Disciplina();
 
 	void setNomeDisciplina(string nomeDis);
@@ -22,9 +22,11 @@ public:
 	
 	Departamento* getDepartamento();
 
+protected:
+	int id;
+
 private:
 	string nome;
-	int id;
 	Departamento* departamentoAssociado;
 
 	ListaAlunos listaDeAlunos; // lista duplamente encadeada.

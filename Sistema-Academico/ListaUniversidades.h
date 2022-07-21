@@ -13,10 +13,10 @@ public:
 	~ListaUniversidades();
 
 	void setNovaUniversidade(Universidade* nova);
-
 	void printUniversidades();
-	
+
 	Universidade* existeUniversidade(string NomeObjUni);
+	ElUniversidade* getUniversidadeInicio();
 
 private:
 	int maxNunis; // numero maximo de universidades

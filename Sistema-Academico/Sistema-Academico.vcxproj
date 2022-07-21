@@ -141,7 +141,7 @@
     <ClCompile Include="Pessoa.cpp" />
     <ClCompile Include="Principal.cpp" />
     <ClCompile Include="Professor.cpp" />
-    <ClCompile Include="Sistema-Academico.cpp" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="TimeSa.cpp" />
     <ClCompile Include="Universidade.cpp" />
   </ItemGroup>

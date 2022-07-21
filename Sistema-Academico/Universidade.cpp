@@ -1,7 +1,8 @@
 #include "Universidade.h"
 
-Universidade::Universidade()
+Universidade::Universidade(int UniId)
 {
+	id = UniId;
 	nome = "";
 }
 
@@ -27,6 +28,11 @@ void Universidade::setNome(string nomeU)
 string Universidade::getNome()
 {
 	return nome;
+}
+
+int Universidade::getId()
+{
+	return id;
 }
 
 void Universidade::setDepartamento(Departamento* newDep)

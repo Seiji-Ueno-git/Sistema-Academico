@@ -5,31 +5,31 @@ ListaDisciplinas::ListaDisciplinas(int max)
 {
     maxNdisc = max;
     counter_Disc = 0;
-    atualElDis = NULL;
-    incioElDis = NULL;
+    atualElDis = nullptr;
+    incioElDis = nullptr;
 }
 
 ListaDisciplinas::~ListaDisciplinas()
 {
-    ElDisciplina* aux = NULL;
+    ElDisciplina* aux = nullptr;
     aux = incioElDis;
 
-    while (incioElDis != NULL) {
+    while (incioElDis != nullptr) {
         incioElDis = aux->getProxEl();
         delete aux;
         aux = incioElDis;
     }
-    atualElDis = NULL;
+    atualElDis = nullptr;
 }
 
-void ListaDisciplinas::setNovaDisciplina(Disciplina* newDis)
+void ListaDisciplinas::incluaDisciplina(Disciplina* newDis)
 {
-    if ((newDis != NULL && counter_Disc < maxNdisc)||(newDis != NULL && maxNdisc == -1)){
-        ElDisciplina* aux = NULL;
+    if ((newDis != nullptr && counter_Disc < maxNdisc)||(newDis != nullptr && maxNdisc == -1)){
+        ElDisciplina* aux = nullptr;
         aux = new ElDisciplina();
         aux->setDisplina(newDis);
 
-        if (incioElDis == NULL) {
+        if (incioElDis == nullptr) {
             incioElDis = aux;
             atualElDis = aux;
             counter_Disc++;
@@ -44,6 +44,11 @@ void ListaDisciplinas::setNovaDisciplina(Disciplina* newDis)
     }
 }
 
+ElDisciplina* ListaDisciplinas::getDisciplinaInicio()
+{
+    return incioElDis;
+}
+
 void ListaDisciplinas::printDispinas()
 {
     ElDisciplina* aux;
@@ -51,7 +56,7 @@ void ListaDisciplinas::printDispinas()
 
     int counter = 1;
 
-    while (aux != NULL)
+    while (aux != nullptr)
     {
         std::cout << counter << " --> " << aux->getDisplina()->getNome() << "/"
             << aux->getDisplina()->getId() << "\n Alunos: " << std::endl;
@@ -71,14 +76,14 @@ void ListaDisciplinas::printDisInReverse()
 
     int counter = 0;
 
-    while (aux != NULL)
+    while (aux != nullptr)
     {
         counter++;
         aux = aux->getUltimoEl();
     }
     aux = atualElDis;
 
-    while (aux != NULL)
+    while (aux != nullptr)
     {
         std::cout << counter << " --> " << aux->getDisplina()->getNome() << "/"
             << aux->getDisplina()->getId() << std::endl;

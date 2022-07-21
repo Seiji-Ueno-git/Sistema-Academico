@@ -78,3 +78,8 @@ Universidade* ListaUniversidades::existeUniversidade(string NomeObjUni)
 	}
 	return nullptr;
 }
+
+ElUniversidade* ListaUniversidades::getUniversidadeInicio()
+{
+	return pElInicio;
+}

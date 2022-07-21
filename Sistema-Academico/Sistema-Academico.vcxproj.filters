@@ -25,33 +25,24 @@
     <Filter Include="Arquivos de Cabeçalho\Listas.h\Elementos.h">
       <UniqueIdentifier>{08ae3a99-d646-4756-aee2-34e7c76a9f12}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Arquivos de Cabeçalho\Classes-Base">
+      <UniqueIdentifier>{003407c6-6499-4791-bdc3-5f48dd7d5284}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Origem\Classes-base">
+      <UniqueIdentifier>{0b15cecc-7921-4bc0-9817-4f51f4f32d33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Cabeçalho\Classes-Base\Classes">
+      <UniqueIdentifier>{9bdd571b-b0f9-418f-9bdf-a29ee07e85f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arquivos de Origem\Classes-base\Classes">
+      <UniqueIdentifier>{a50f2c01-aeaf-4d63-84cf-4f942e13e460}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Sistema-Academico.cpp">
+    <ClCompile Include="Main.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
     <ClCompile Include="Principal.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="Pessoa.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="Aluno.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="Professor.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="Universidade.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="Departamento.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="TimeSa.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
-    <ClCompile Include="Disciplina.cpp">
       <Filter>Arquivos de Origem</Filter>
     </ClCompile>
     <ClCompile Include="ElDepartamento.cpp">
@@ -78,30 +69,30 @@
     <ClCompile Include="ElUniversidade.cpp">
       <Filter>Arquivos de Origem\Listas\Elementos</Filter>
     </ClCompile>
+    <ClCompile Include="Universidade.cpp">
+      <Filter>Arquivos de Origem\Classes-base</Filter>
+    </ClCompile>
+    <ClCompile Include="Departamento.cpp">
+      <Filter>Arquivos de Origem\Classes-base</Filter>
+    </ClCompile>
+    <ClCompile Include="Disciplina.cpp">
+      <Filter>Arquivos de Origem\Classes-base</Filter>
+    </ClCompile>
+    <ClCompile Include="Pessoa.cpp">
+      <Filter>Arquivos de Origem\Classes-base</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeSa.cpp">
+      <Filter>Arquivos de Origem\Classes-base</Filter>
+    </ClCompile>
+    <ClCompile Include="Aluno.cpp">
+      <Filter>Arquivos de Origem\Classes-base\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Professor.cpp">
+      <Filter>Arquivos de Origem\Classes-base\Classes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Principal.h">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="Pessoa.h">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="Aluno.h">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="Professor.h">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="Universidade.h">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="Departamento.h">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="TimeSa.h">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="Disciplina.h">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
     <ClInclude Include="ListaAlunos.h">
@@ -127,6 +118,27 @@
     </ClInclude>
     <ClInclude Include="ListaUniversidades.h">
       <Filter>Arquivos de Cabeçalho\Listas.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Universidade.h">
+      <Filter>Arquivos de Cabeçalho\Classes-Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Departamento.h">
+      <Filter>Arquivos de Cabeçalho\Classes-Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Disciplina.h">
+      <Filter>Arquivos de Cabeçalho\Classes-Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Pessoa.h">
+      <Filter>Arquivos de Cabeçalho\Classes-Base</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeSa.h">
+      <Filter>Arquivos de Cabeçalho\Classes-Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Aluno.h">
+      <Filter>Arquivos de Cabeçalho\Classes-Base\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Professor.h">
+      <Filter>Arquivos de Cabeçalho\Classes-Base\Classes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

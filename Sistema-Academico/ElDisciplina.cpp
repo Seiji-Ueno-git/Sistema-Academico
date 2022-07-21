@@ -6,16 +6,16 @@
 
 ElDisciplina::ElDisciplina()
 {
-	ptrDisplina = NULL;
-	pProxEldisplina = NULL;
-	pUltimoElDisplina = NULL;
+	ptrDisplina = nullptr;
+	pProxEldisplina = nullptr;
+	pUltimoElDisplina = nullptr;
 }
 
 ElDisciplina::~ElDisciplina()
 {
-	ptrDisplina = NULL;
-	pProxEldisplina = NULL;
-	pUltimoElDisplina = NULL;
+	ptrDisplina = nullptr;
+	pProxEldisplina = nullptr;
+	pUltimoElDisplina = nullptr;
 }
 
 void ElDisciplina::setDisplina(Disciplina* Dis)

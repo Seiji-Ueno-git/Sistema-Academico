@@ -2,11 +2,21 @@
 #include "Aluno.h"
 #include "Disciplina.h"
 
+ListaAlunos::ListaAlunos(int maximo)
+{
+	ptrDisplina = nullptr;
+	ptrInicioElAluno = nullptr;
+	ptrAtualElAluno = nullptr;
+
+	maxAlunos = maximo;
+	alunosMatriculados = 0;
+}
+
 ListaAlunos::ListaAlunos(Disciplina* disciplinaAfiliada, int max)
 {
 	ptrDisplina = disciplinaAfiliada;
-	ptrInicioElAluno = NULL;
-	ptrAtualElAluno = NULL;
+	ptrInicioElAluno = nullptr;
+	ptrAtualElAluno = nullptr;
 
 	maxAlunos = max;
 	alunosMatriculados = 0;
@@ -17,29 +27,29 @@ ListaAlunos::~ListaAlunos()
 	alunosMatriculados = 0;
 	maxAlunos = 0;
 
-	ElAluno* aux = NULL;
+	ElAluno* aux = nullptr;
 	aux = ptrInicioElAluno;
 
-	while (ptrInicioElAluno != NULL)
+	while (ptrInicioElAluno != nullptr)
 	{
 		ptrInicioElAluno = aux->getProxElAluno();
 		delete aux;
 		aux = ptrInicioElAluno;
 	}
-	ptrAtualElAluno = NULL;
-	ptrDisplina = NULL;
+	ptrAtualElAluno = nullptr;
+	ptrDisplina = nullptr;
 }
 
 void ListaAlunos::setAluno(Aluno* novoAluno)
 {
 	if (novoAluno->getUniversidade() == ptrDisplina->getDepartamento()->GetUniFiliada()) {
 		if (alunosMatriculados < (maxAlunos + 1)) {
-			if (novoAluno != NULL) {
-				ElAluno* aux = NULL;
+			if (novoAluno != nullptr) {
+				ElAluno* aux = nullptr;
 				aux = new ElAluno();
 				aux->setAluno(novoAluno);
 
-				if (ptrInicioElAluno == NULL) {
+				if (ptrInicioElAluno == nullptr) {
 					ptrInicioElAluno = aux;
 					ptrAtualElAluno = aux;
 				}
@@ -53,7 +63,7 @@ void ListaAlunos::setAluno(Aluno* novoAluno)
 			}
 			else
 			{
-				std::cout << "NULL pointer recebido - não adicionado" << std::endl;
+				std::cout << "nullptr pointer recebido - não adicionado" << std::endl;
 			}
 		}
 		else
@@ -75,7 +85,7 @@ void ListaAlunos::printAlunos()
 	aux = ptrInicioElAluno;
 	int counter = 1;
 
-	while (aux != NULL)
+	while (aux != nullptr)
 	{
 		std::cout << counter << " --> " << aux->getAluno()->getNome() << "/"
 			<< aux->getAluno()->getRa() << std::endl;
@@ -92,14 +102,14 @@ void ListaAlunos::printAlunosV2()
 
 	int counter = 0;
 
-	while (aux != NULL)
+	while (aux != nullptr)
 	{
 		counter++;
 		aux = aux->getUltimoElAluno();
 	}
 	aux = ptrAtualElAluno;
 
-	while (aux != NULL)
+	while (aux != nullptr)
 	{
 		std::cout << counter << " --> " << aux->getAluno()->getNome() << "/"
 			<<aux->getAluno()->getRa() << std::endl;

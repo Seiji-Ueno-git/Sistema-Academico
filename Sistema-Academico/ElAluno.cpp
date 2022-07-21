@@ -3,35 +3,35 @@
 
 ElAluno::ElAluno()
 {
-	ptrAluno = NULL;
-	ptrProxElAluno = NULL;
-	ptrUltimoElAluno = NULL;
+	ptrAluno = nullptr;
+	ptrProxElAluno = nullptr;
+	ptrUltimoElAluno = nullptr;
 }
 
 ElAluno::~ElAluno()
 {
-	ptrAluno = NULL;
-	ptrProxElAluno = NULL;
-	ptrUltimoElAluno = NULL;
+	ptrAluno = nullptr;
+	ptrProxElAluno = nullptr;
+	ptrUltimoElAluno = nullptr;
 }
 
 void ElAluno::setAluno(Aluno* novoAluno)
 {
-	if (novoAluno!= NULL) {
+	if (novoAluno!= nullptr) {
 		ptrAluno = novoAluno;
 	}
 }
 
 void ElAluno::setProxElAluno(ElAluno* proxEl)
 {
-	if (proxEl != NULL) {
+	if (proxEl != nullptr) {
 		ptrProxElAluno = proxEl;
 	}
 }
 
 void ElAluno::setUltimoElAluno(ElAluno* ultimoEl)
 {
-	if (ultimoEl != NULL) {
+	if (ultimoEl != nullptr) {
 		ptrUltimoElAluno = ultimoEl;
 	}
 }

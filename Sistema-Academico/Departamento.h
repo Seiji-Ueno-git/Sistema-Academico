@@ -11,18 +11,23 @@ using std::string;
 class Departamento
 {
 public:
-	Departamento();
+	Departamento(int id);
 	~Departamento();
 
 	void setNome(string nomeD);
-
-	string getNome();
 	void setUniFiliada(Universidade* uni);
+	void setNovaDisciplina(Disciplina* newDis);
+	void setId(int id);
+
+	int getID();
+	string getNome();
 	Universidade* GetUniFiliada();
 
-	void setNovaDisciplina(Disciplina* newDis);
 	void printDispinas();
 	void printDisInReverse();
+
+protected:
+	int id;
 
 private:
 	Universidade* universidadeFiliada;

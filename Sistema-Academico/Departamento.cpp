@@ -2,16 +2,18 @@
 #include "Universidade.h"
 #include "Disciplina.h"
 
-Departamento::Departamento()
+
+Departamento::Departamento(int DepId)
 {
+	id = DepId;
 	nome = "";
-	universidadeFiliada = NULL;
+	universidadeFiliada = nullptr;
 }
 
 Departamento::~Departamento()
 {
 	nome = "";
-	universidadeFiliada = NULL;
+	universidadeFiliada = nullptr;
 }
 
 void Departamento::setNome(string nomeD)
@@ -28,6 +30,16 @@ void Departamento::setNome(string nomeD)
 	}
 }
 
+void Departamento::setId(int idDep)
+{
+	id = idDep;
+}
+
+int Departamento::getID()
+{
+	return id;
+}
+
 string Departamento::getNome()
 {
 	return nome;
@@ -35,7 +47,7 @@ string Departamento::getNome()
 
 void Departamento::setUniFiliada(Universidade* uni)
 {
-	if (uni != NULL) {
+	if (uni != nullptr) {
 		universidadeFiliada = uni;
 		uni->setDepartamento(this);
 	}
@@ -48,7 +60,7 @@ Universidade* Departamento::GetUniFiliada()
 
 void Departamento::setNovaDisciplina(Disciplina* newDis)
 {
-	disciplinas.setNovaDisciplina(newDis);
+	disciplinas.incluaDisciplina(newDis);
 }
 
 void Departamento::printDispinas()

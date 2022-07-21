@@ -6,6 +6,7 @@ class Aluno;
 class ListaAlunos
 {
 public:
+	ListaAlunos(int maximo = 10);
 	ListaAlunos(Disciplina* disciplinaAfiliada, int maximo = 10);
 	~ListaAlunos();
 

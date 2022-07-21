@@ -10,7 +10,9 @@ public:
 	ListaDisciplinas(int max = -1);
 	~ListaDisciplinas();
 
-	void setNovaDisciplina(Disciplina* newDis);
+	void incluaDisciplina(Disciplina* newDis);
+	
+	ElDisciplina* getDisciplinaInicio();
 
 	void printDispinas();
 	void printDisInReverse();

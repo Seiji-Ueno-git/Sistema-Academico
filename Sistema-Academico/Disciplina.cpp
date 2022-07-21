@@ -1,16 +1,17 @@
 #include "Disciplina.h"
 #include "Aluno.h"
 
-Disciplina::Disciplina():
-	listaDeAlunos(this,5)
+Disciplina::Disciplina(int DisId):
+	listaDeAlunos(this, 5)
 {
-	departamentoAssociado = NULL;
+	id = DisId;
+	departamentoAssociado = nullptr;
 	id = -1;
 }
 
 Disciplina::~Disciplina()
 {
-	departamentoAssociado = NULL;
+	departamentoAssociado = nullptr;
 	id = -1;
 }
 
@@ -37,7 +38,7 @@ void Disciplina::setId(int idDis)
 
 void Disciplina::setDepartamentoAssociado(Departamento* depFiliado)
 {
-	if (depFiliado != NULL) {
+	if (depFiliado != nullptr) {
 		departamentoAssociado = depFiliado;
 		depFiliado->setNovaDisciplina(this);
 	}
