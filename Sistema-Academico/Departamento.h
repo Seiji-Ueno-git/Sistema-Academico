@@ -26,12 +26,10 @@ public:
 	void printDispinas();
 	void printDisInReverse();
 
-protected:
-	int id;
-
 private:
 	Universidade* universidadeFiliada;
 	string nome;
+	int id;
 	
 	ListaDisciplinas disciplinas; // lista duplamente encadeada.
 };

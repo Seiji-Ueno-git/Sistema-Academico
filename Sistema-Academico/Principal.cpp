@@ -177,7 +177,7 @@ void Principal::MenuGravar()
 		cout << " 2 - Gravar Departamentos. " << endl;
 		cout << " 3 - Gravar Disciplinas. " << endl;
 		cout << " 4 - Gravar Alunos. " << endl;
-		cout << " 5 - Sair. " << endl;
+		cout << " 5 - Menu Principal. " << endl;
 		cin >> op;
 		switch (op)
 		{
@@ -275,9 +275,6 @@ void Principal::cadDisciplina()
 	cout << "Escreva o nome do Departamento : " << endl;
 	cout << " -> ";
 	std::cin >> nomeDep;
-	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-	//std::cin.sync();
-	
 
 	Departamento* ptrDep = LDepartamentos.existeDepartamento(nomeDep);
 
@@ -468,7 +465,7 @@ void Principal::GravarDisciplinas() {
 				<< " " << (paux->getDisplina()->getDepartamento()->getNome()) << endl;
 			paux = paux->getProxEl();
 		}
-		cout << " As disciplinas foram gravadas " << endl;
+		cout << " Disciplinas gravadas com sucesso " << endl;
 	}
 	else {
 		std::cerr << " Arquivo nao pode ser aberto " << endl;
@@ -495,6 +492,7 @@ void Principal::GravarAlunos() {
 	out.close();
 	*/
 }
+
 // funcoes para a recuperacao de objetos em arquivo
 void Principal::RecuperarTudo() {
 	RecuperarUniversidades();

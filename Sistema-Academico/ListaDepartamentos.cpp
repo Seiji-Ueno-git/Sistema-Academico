@@ -1,6 +1,9 @@
 #include "ListaDepartamentos.h"
 #include "Departamento.h"
 
+using std::cout;
+using std::endl;
+
 ListaDepartamentos::ListaDepartamentos(int MaxDeps)
 {
 	maxNdeps = MaxDeps;
@@ -25,8 +28,9 @@ ListaDepartamentos::~ListaDepartamentos()
 
 void ListaDepartamentos::setNovoDepartamento(Departamento* newDep)
 {
-	if ((newDep != nullptr && counter_deps < maxNdeps)||(newDep != nullptr && maxNdeps == -1)) {
+	if (((newDep != nullptr) && (counter_deps < maxNdeps))||((newDep != nullptr) && (maxNdeps == -1))) {
 		ElDepartamento* paux = new ElDepartamento();
+		paux->setDepartamento(newDep);
 
 		if (inicioElDep == nullptr) {
 			atualElDep = paux;
@@ -40,20 +44,20 @@ void ListaDepartamentos::setNovoDepartamento(Departamento* newDep)
 			counter_deps++;
 		}
 	}
+	else
+	{
+		cout << "Error -  Departamento nao foi incluido" << endl;
+	}
 }
 
 void ListaDepartamentos::printDepartamentos()
 {
-	ElDepartamento* aux = nullptr;
-	aux = inicioElDep;
-	int i = 1;
+	ElDepartamento* paux = inicioElDep;
 
-	while (aux != nullptr)
+	while (paux != nullptr)
 	{
-		std::cout << "* " << aux->getDepartamento()->getNome() << " / " << i << std::endl;
-		aux->getDepartamento()->printDispinas();
-		aux = aux->getProxElDep();
-		i++;
+		std::cout << "* " << (paux->getDepartamento()->getNome()) << std::endl;
+		paux = paux->getProxElDep();
 	}
 	std::cout << std::endl;
 }
@@ -65,14 +69,14 @@ ElDepartamento* ListaDepartamentos::getDepartamentoInicio()
 
 Departamento* ListaDepartamentos::existeDepartamento(string nomeDep)
 {
-	ElDepartamento* paux = nullptr;
-	paux = inicioElDep;
+	ElDepartamento* paux = inicioElDep;
 
-	while (paux != NULL)
+	while (paux != nullptr)
 	{
 		if ((paux->getDepartamento()->getNome()) == nomeDep) {
 			return paux->getDepartamento();
 		}
+		paux = paux->getProxElDep();
 	}
 	return nullptr;
 }
